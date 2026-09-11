@@ -971,11 +971,7 @@ footer a {
    ========================= */
 
 @media screen and (max-width: 480px) {
-
   /* TOP BAR */
-  *{
-    overflow-x: hidden;
-  }
   .sharp {
     flex-direction: column;
     text-align: center;
@@ -1360,11 +1356,14 @@ footer a {
 }
 
 @media (max-width: 480px) {
+  html,
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .head {
+    position: sticky;
+    top: 0;
     overflow: visible;
   }
 
