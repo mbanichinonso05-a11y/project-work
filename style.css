@@ -110,13 +110,23 @@ header {
   font-size: 0.8rem;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #970c12;
+}
+
 .first {
-  background-image: url(./background\ images.jpeg);
+  background-image: url(./background\ images.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 33vw;
+  height: 35vw;
   position: relative;
   padding: 0 0 2vw;
+  margin-bottom: 5vw;
 }
 
 .overlay {
@@ -137,8 +147,7 @@ header {
 .gee h1 {
   font-size: 3rem;
   font-weight: 800;
-  position: relative;
-  top: -2vw;
+  line-height: 1.2;
 }
 
 .gee h1 span {
@@ -148,13 +157,18 @@ header {
 .gee .young {
   font-size: 0.9rem;
   font-weight: 600;
+
+}
+
+.content {
+  position: relative;
+  top: -3vw;
 }
 
 .content .with {
   max-width: 25vw;
   font-weight: 400;
-  margin-top: -3vw;
-  padding-bottom: 1vw;
+  padding: 1vw 0 2vw;
 }
 
 .gee img {
@@ -187,7 +201,8 @@ header {
   color: #970c12;
   border: 1px solid #970c12;
 }
-.cover{
+
+.cover {
   width: -1.6vw;
   margin-bottom: 10vw;
 }
@@ -197,9 +212,9 @@ header {
   z-index: 1;
   background: white;
   padding: 20px;
-  top: 0.5vw;
+  top: -5vw;
   border-radius: 10px;
-  width: 15.5vw;
+  width: 17.5vw;
   color: #970c12;
 }
 
@@ -323,8 +338,10 @@ header {
   gap: 20px;
 }
 
-.program-card {
+.property-card {
   text-align: center;
+  border: 1px solid #970c12;
+
 }
 
 .property-card img {
@@ -359,7 +376,6 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5vw;
-  border-right: 1px solid rgba(255, 217, 0, 0.411);
   padding-right: 0.5vw;
 }
 
@@ -367,16 +383,14 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5vw;
-  position: relative;
-  top: 0.5vw;
-  border-right: 1px solid rgba(255, 217, 0, 0.411);
-  padding-right: 0.5vw;
 }
 
 .icons {
   color: rgba(255, 217, 0, 0.411);
   outline: #970c12;
   font-size: 3rem;
+  position: relative;
+  top: 0.5vw;
 }
 
 .stats h2 {
@@ -796,27 +810,22 @@ footer a {
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
+
+  /* Top bar */
   .sharp {
     font-size: 0.75rem;
     padding: 8px 3%;
   }
-  .head{
-    z-index: 100;
+
+  .sharp a {
+    margin-left: 8px;
   }
 
+  /* Header */
   header {
     padding: 10px 3%;
-    position: sticky;
-    /* position: fixed; */
-  }
-
-  .logo .sun {
-    font-size: 1rem;
-  }
-
-  .logo .sun {
-    font-size: 1rem;
   }
 
   .head nav a {
@@ -829,131 +838,164 @@ footer a {
     font-size: 0.7rem;
   }
 
+  /* Logo */
+  .logo .sun {
+    font-size: 1rem;
+  }
+
+  .logo .inter,
+  .logo .nurture {
+    font-size: 0.6rem;
+  }
+
+  /* Hero section */
   .first {
     height: auto;
-    min-height: 600px;
-    padding: 50px 4%;
+    min-height: 500px;
+    padding: 2vw 2vw;
   }
 
   .gee {
-    gap: 20px;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
   }
+
+  .content {
+    top: 0;
+    justify-content: center;
+
+  }
+
+  .young {}
 
   .gee h1 {
     font-size: 2.5rem;
   }
 
-  .gee img {
-    padding-left: 0;
-    width: 100%;
+  .content .with {
+    max-width: 200px;
+    /* margin: auto; */
+    text-align: left;
+    position: relative;
+    padding: 50px 0 60px;
+
   }
 
+  .cover img {
+    width: 30vw;
+    height: 40vw;
+    /* top: 10vw; */
+    position: absolute;
+    padding-top: 20vw;
+    padding-left: 4vw;
+  }
+
+  .gee-ui {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* Form */
   .form {
-    width: 280px;
+    width: 50%;
+    margin: 40px auto 0;
+    top: 0;
+    display: none;
   }
 
+  /* About section */
   .section {
-    margin-top: 8vw;
-    padding: 0 4%;
-    gap: 20px;
-    margin-buttom: 10vw;
-
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 0 5%;
   }
 
   .section img {
-    width: 45%;
-    padding-top: 20vw;
-    margin-buttom: 60vw;
+    width: 60%;
+    margin-bottom: 20px;
   }
 
   .note {
-    margin-left: 10px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .sis h2 {
-    text-align: center;
-    justify-content: center;
-  }
-
-  .sis p {
-    text-align: center;
-    justify-content: center;
-
-  }
-
-  .holy {
-    font-size: 18px;
-  }
-
-  .kk {
-    padding: 50px 4%;
-  }
-
+  /* Property cards */
   .property {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
   }
 
+  /* Statistics */
   .stats {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 25px;
   }
 
   .stat-one,
   .start-one {
     justify-content: center;
-    border-right: none;
   }
 
-  .icons {
-    font-size: 2.5rem;
-  }
-
-
+  /* Gallery */
   .me {
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px 4%;
   }
 
   .me img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
   }
 
+  /* Information cards */
+  .information {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .footer {
+  /* Footer */
+  footer {
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 40px 4%;
+    gap: 25px;
   }
 
-  .footer input {
-    padding: 8px;
-    width: 100%;
-    border-radius: 5px;
-    /* border: none; */
-    background-color: white;
+  .can {
+    flex-direction: column;
   }
-
 }
 
-@media (max-width: 480px) {
 
+/* =========================
+   RESPONSIVE FOR 480px
+   ========================= */
+
+@media screen and (max-width: 480px) {
+
+  /* TOP BAR */
+  *{
+    overflow-x: hidden;
+  }
   .sharp {
-    font-size: 0.65rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
     padding: 8px 3%;
+    font-size: 0.7rem;
   }
 
+  .sharp a {
+    margin-left: 5px;
+  }
+
+
+  /* HEADER */
   header {
-    padding: 12px 4%;
+    padding: 10px 5%;
   }
 
-  .logo img {
-    width: 55px;
+  .logo {
+    gap: 5px;
   }
 
   .logo .sun {
@@ -965,170 +1007,374 @@ footer a {
     font-size: 0.5rem;
   }
 
-  .head nav a {
-    font-size: 0.6rem;
+
+  /* HAMBURGER */
+  .hamburger {
+    display: block;
+    font-size: 28px;
   }
 
+
+  /* NAVIGATION */
+  .head nav {
+    display: none;
+  }
+
+
+  /* ADMISSION BUTTON */
   .amen {
-    font-size: 0.7rem;
-    padding: 8px 12px;
+    padding: 7px 10px;
+    font-size: 0.65rem;
   }
 
 
+  /* HERO SECTION */
   .first {
-    padding: 10px 3%;
+    /* display: none; */
+    height: 90vw;
+    min-height: auto;
+    /* padding: 30px 5%; */
+    /* padding-left: 1vw; */
+    margin-bottom: 40px;
+        
+  }
+
+  .gee {
+    flex-direction: column;
+    text-align: left;
+    padding-top: 20vw;
+  }
+
+  .content {
+    top: 0;
+    padding: 0;
   }
 
   .gee h1 {
-    font-size: 1px;
+    font-size: 2rem;
   }
 
-  .gee p {
-    font-size: 0.4rem;
+  .gee .young {
+    font-size: 0.75rem;
+  }
+
+  .content .with {
+    max-width: 50vw;
+    font-size: 0.85rem;
+    padding: 15px 0 20px;
+  }
+
+  .gee img {
+    width: 35vw;
+    height: 55;
+    top: 10px;
+  }
+
+
+  /* HERO BUTTONS */
+  .gee-ui {
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
   }
 
   .gee-ui a {
-    font-size: 0.5rem;
-    padding: 5px;
-  }
-
-  .form {
-    padding: 20px;
-    font-size: 10px;
-  }
-
-  .section {
-    padding: 0 4%;
-    padding-button: 300vw;
-  }
-
-  .section img {
     width: 80%;
-    /* padding-/top: 20vw; */
-  }
-
-  .note h2 {
-    font-size: 1.4rem;
-  }
-
-  .holy {
-    font-size: 16px;
-  }
-
-  .class {
+    text-align: center;
     font-size: 0.8rem;
   }
 
 
-  /* PROGRAMS */
+  /* FORM */
+  .form {
+    width: 90%;
+    margin: 30px auto 0;
+    top: 0;
+  }
+
+  .form input,
+  .form select {
+    width: 100%;
+  }
+
+
+  /* SECTION */
+  .section {
+    flex-direction: column;
+    padding: 0 5%;
+    margin-bottom: 50px;
+  }
+
+  .section img {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .note {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 0.9rem;
+  }
+
+
+  /* KK SECTION */
   .kk {
-    padding: 40px 4%;
+    padding: 40px 5%;
   }
 
   .kk-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
+  .padi {
+    font-size: 0.85rem;
+  }
+
+
+  /* PROPERTY CARDS */
   .property {
     grid-template-columns: 1fr;
-  }
-
-  .property-card {
-    text-align: center;
+    gap: 20px;
   }
 
 
-  /* STATS */
+  /* STATISTICS */
   .stats {
-    grid-template-columns: 1fr;
-    padding: 30px 10%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 5%;
   }
 
   .stat-one,
   .start-one {
-    flex-direction: row;
     justify-content: center;
   }
 
+  .icons {
+    font-size: 2rem;
+  }
 
-  /* ACTIVITIES */
+
+  .big {
+    font-size: larger;
+    margin-bottom: 7vw;
+  }
   .me {
-    grid-template-columns: 1fr;
-    padding: 20px 8%;
+    /* grid-template-columns: repeat(1, 1fr); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 17vw;
+    font-size: 1.6rem;
+    /* margin-left: 1vw; */
+    margin-bottom: 7vw;
   }
 
   .me img {
-    width: 100%;
-    height: auto;
+    width: 80vw;
+    height: 55vw;
+    
+
   }
 
+
+  /* INFORMATION CARDS */
+  .information {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+
+  /* TOUR CARD */
+  .tour-card {
+    min-height: 180px;
+  }
+
+  .tour-content {
+    padding: 20px;
+  }
+
+  .tour-card p {
+    font-size: 11px;
+    max-width: 150px;
+  }
+
+  .tour-button {
+    font-size: 14px;
+  }
+
+
+  /* FOOTER */
   footer {
     grid-template-columns: 1fr;
-    text-align: center;
     padding: 40px 8%;
+    text-align: center;
   }
 
   .can {
     align-items: center;
-  }
-
-  .life {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
+    justify-content: center;
   }
 
   .nah {
     justify-content: center;
   }
 
-  footer input {
-    width: 100% !important;
+  .footer p {
+    margin-top: 20px;
   }
 
+
+  /* BOTTOM BAR */
   .omo {
-    font-size: 0.7rem;
-    padding: 10px 4%;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
   }
-
 }
 
-.hamburger {
-  display: none;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-@media (max-width: 767px) {
+/* Responsive overrides for the mobile menu and hero layout. */
+@media (max-width: 768px) {
   .head {
-    position: relative;
+    position: sticky;
+    z-index: 1000;
   }
 
   .hamburger {
     display: block;
-    font-size: 30px;
-    color: #970c12;
-    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .head nav,
+  .head nav.active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   .head nav {
     display: none;
-    width: 100%;
-    flex-direction: column;
-    background-color: white;
-    padding: 15px 0;
   }
 
-  #menu-toggle:checked~nav {
+  .head nav.active {
     display: flex;
   }
 
   .head nav a {
+    display: block;
     width: 100%;
+    padding: 14px;
     text-align: center;
-    padding: 12px;
-    border-bottom: 1px solid #eee;
+  }
+
+  .amen {
+    display: none;
+  }
+
+  .first {
+    height: auto;
+    min-height: 0;
+    padding: 40px 5% 50px;
+    margin-bottom: 40px;
+  }
+
+  .overlay {
+    position: relative;
+    inset: auto;
+    min-height: 0;
+  }
+
+  .gee {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    padding-top: 20px;
+  }
+
+  .content {
+    width: 100%;
+    top: 0;
+    text-align: center;
+  }
+
+  .gee h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .content .with {
+    max-width: 34rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .gee-ui {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .cover {
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .cover img {
+    position: static;
+    display: block;
+    width: min(75vw, 360px);
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .gee img {
+    width: min(75vw, 360px);
+    height: auto;
+    top: 0;
+  }
+
+  .form {
+    display: block;
+    top: 0;
+    width: min(100%, 360px);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .head nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .head {
+    overflow: visible;
+  }
+
+  .head nav.active {
+    display: flex !important;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
+  .nurture{
+    display: none;
   }
 }
